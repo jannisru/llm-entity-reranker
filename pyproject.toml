@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "llm-entity-reranker"
+version = "0.1.0"
+description = "Entity matching pipeline with ANN blocking, fuzzy scoring, embedding reranking, and optional LLM reranking via Ollama"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "pyarrow>=13.0",
+    "duckdb>=0.10",
+    "sentence-transformers>=2.7",
+    "faiss-cpu>=1.7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-cov"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"
