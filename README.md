@@ -19,14 +19,10 @@ Final matches (Parquet / CSV)
 
 ## Installation
 
-```bash
-pip install llm-entity-reranker
-```
 
 ## Quick start
 
 ```python
-from llm_entity_reranker import run_pipeline, MatchingConfig
 
 result = run_pipeline(
     left_input_file="dblp.csv",
