@@ -39,7 +39,6 @@ result = run_pipeline(
 Add embedding reranking on top of the fuzzy candidates:
 
 ```python
-from llm_entity_reranker import embed_candidates, rerank_by_embedding
 
 embed_candidates(
     candidates_parquet=result["fuzzy_best_output_parquet"],
@@ -56,7 +55,6 @@ rerank_by_embedding(
 ## Benchmark (DBLP-ACM)
 
 ```python
-from llm_entity_reranker import run_benchmark, format_results_table
 
 results = run_benchmark()
 print(format_results_table(results))
